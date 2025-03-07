@@ -42,6 +42,8 @@ const config = {
           "100": "#E4ECFF",
         },
         purple: "#CBACF9",
+        purpleLight: "#9583FF",
+        purpleDark: "#714EBD",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -75,6 +77,9 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      backgroundImage: {
+        purpleGradient: "linear-gradient(to right, #9583FF, #714EBD)",
       },
       borderRadius: {
         lg: "var(--radius)",
