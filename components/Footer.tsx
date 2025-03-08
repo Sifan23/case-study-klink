@@ -14,39 +14,73 @@ const Footer = () => {
           className="w-full h-full opacity-50 "
         />
       </div>
-
-      <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
-          presence to the next level?
-        </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
-        </p>
-        <a href="mailto:contact@jsmastery.pro">
-          <MagicButton
-            title="Let's get in touch"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-8 ">
+        {/* Left Column: Logo & Mission */}
+        <div>
+          <img src="/klink-logo.svg" alt="Klink Logo" className="h-12 mb-4" />
+          <p className="text-gray-300">
+            Our mission is to revolutionize decentralized finance by making
+            $KLINK accessible and rewarding for everyone.
+          </p>
+        </div>
+        {/* Right Column: Useful Resources */}
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Useful Resources</h3>
+          <ul className="space-y-2">
+            {[
+              "Buy $KLINK",
+              "Stake $KLINK",
+              "Klink Docs",
+              "Media Kit",
+              "Link 3",
+            ].map((item, index) => (
+              <li key={index} className="hover:text-gray-400 cursor-pointer">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
+
+      <p className="text-gray-300 mb-3">
+        Don’t miss $KLINK News & Promotions, subscribe!
+      </p>
+      {/* Second Row: Two Columns (Subscription & Social Media) */}
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-8 mt-10">
+        {/* Left Column: Subscription */}
+        <div>
+          <div className="flex">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="p-2 rounded-l-lg w-full text-black"
+            />
+            <button className="bg-blue-500 px-4 py-2 rounded-r-lg hover:bg-blue-600">
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        {/* Right Column: Social Media */}
+        <div className="flex space-x-4 justify-start md:justify-end">
+          {socialMedia.map((info) => (
+            <a
+              key={info.id}
+              // href={info.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 flex justify-center items-center bg-gray-700 rounded-lg border border-gray-500 hover:bg-gray-600 transition"
+            >
+              <img src={info.img} alt="social icon" width={20} height={20} />
+            </a>
+          ))}
+        </div>
+      </div>
+
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <p className="md:text-base text-sm md:font-normal font-light">
           Copyright © 2024 Adrian Hajdin
         </p>
-
-        <div className="flex items-center md:gap-3 gap-6">
-          {socialMedia.map((info) => (
-            <div
-              key={info.id}
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
-            >
-              <img src={info.img} alt="icons" width={20} height={20} />
-            </div>
-          ))}
-        </div>
       </div>
     </footer>
   );
