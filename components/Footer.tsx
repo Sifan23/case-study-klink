@@ -1,4 +1,5 @@
 import { FaLocationArrow } from "react-icons/fa6";
+import Image from "next/image";
 
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
@@ -18,15 +19,19 @@ const Footer = () => {
         {/* Left Column: Logo & Mission */}
         <div>
           <img src="/klink-logo.svg" alt="Klink Logo" className="h-12 mb-4" />
-          <p className="text-gray-300">
-            Our mission is to revolutionize decentralized finance by making
-            $KLINK accessible and rewarding for everyone.
+          <p className="text-[#0F0F0F] font-normal text-[18px] w-[679px] h-[115px] opacity-50">
+            Our mission is to activate millions of Web3 users through AI enabled
+            wealth creation technology, mutually servicing our community
+            platform and providing partners with easy-to-embed integration tools
+            to assist their activation and monetization, functioning as a robust
+            earnings infrastructure for dApps, platforms, gaming, Web3 media,
+            mini-apps, and blockchain ecosystems.
           </p>
         </div>
         {/* Right Column: Useful Resources */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Useful Resources</h3>
-          <ul className="space-y-2">
+          <h3 className="text-[28px] font-extrabold mb-4">Useful Resources</h3>
+          <ul className="space-y-[30px]">
             {[
               "Buy $KLINK",
               "Stake $KLINK",
@@ -34,7 +39,10 @@ const Footer = () => {
               "Media Kit",
               "Link 3",
             ].map((item, index) => (
-              <li key={index} className="hover:text-gray-400 cursor-pointer">
+              <li
+                key={index}
+                className="text-[#0F0F0F] cursor-pointer text-[18px] font-normal"
+              >
                 {item}
               </li>
             ))}
@@ -42,9 +50,12 @@ const Footer = () => {
         </div>
       </div>
 
-      <p className="text-gray-300 mb-3">
-        Don’t miss $KLINK News & Promotions, subscribe!
+      <p className="text-[#0F0F0F] mb-3 w-[432px] h-[23px] opacity-50">
+        <span className="font-normal text-[18px]">Don’t miss </span>
+        <span className="font-bold text-[18px]">$KLINK News & Promotions</span>
+        <span className="font-normal text-[18px]">, subscribe!</span>
       </p>
+
       {/* Second Row: Two Columns (Subscription & Social Media) */}
       <div className="grid md:grid-cols-2 grid-cols-1 gap-8 mt-10">
         {/* Left Column: Subscription */}
@@ -52,10 +63,10 @@ const Footer = () => {
           <div className="flex">
             <input
               type="email"
-              placeholder="Enter your email"
-              className="p-2 rounded-l-lg w-full text-black"
+              placeholder="Enter Email Address"
+              className="w-[493px] h-[72px] p-[8px] rounded-[100px] border-[1px] border-gradient-to-r from-[#9C78EDB2] to-[#9C78ED80] bg-[#FFFFFF0D] text-black placeholder:text-gray-400"
             />
-            <button className="bg-blue-500 px-4 py-2 rounded-r-lg hover:bg-blue-600">
+            <button className="w-[118px] h-[56px] bg-gradient-to-r from-[#674EFF] to-[#714EBD] rounded-[100px] text-white font-[500] text-[16px] leading-[150%] tracking-0px mt-[16px] mr-[10px] py-[16px] px-[32px] flex justify-center items-center">
               Subscribe
             </button>
           </div>
@@ -66,20 +77,25 @@ const Footer = () => {
           {socialMedia.map((info) => (
             <a
               key={info.id}
-              // href={info.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 flex justify-center items-center bg-gray-700 rounded-lg border border-gray-500 hover:bg-gray-600 transition"
+              className="w-[60px] h-[60px] flex justify-center items-center rounded-full border-[3px] border-[#9A8AFE80] bg-white p-2 relative"
             >
-              <img src={info.img} alt="social icon" width={20} height={20} />
+              <Image
+                src={info.img}
+                alt="social icon"
+                width={24}
+                height={24}
+                className="absolute"
+              />
             </a>
           ))}
         </div>
       </div>
 
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
-        <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2024 Adrian Hajdin
+      <div className="flex mt-16 md:flex-row flex-col justify-between items-center w-[1320px] h-[18px] opacity-20 ">
+        <p className="text-[14px] font-[400] leading-[130%] tracking-[0%] font-inter text-[#0F0F0F]">
+          Copyright © 2024 Klink Finance. All rights reserved.
         </p>
       </div>
     </footer>
