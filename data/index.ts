@@ -106,67 +106,57 @@ export const projects = [
 
 export const testimonials = [
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-];
-
-export const companies = [
-  {
     id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
+    img: "/Binance.svg",
   },
   {
     id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
+    img: "/Crypto.svg",
   },
   {
     id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
+    img: "/Nexo.svg",
   },
   {
     id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
+    img: "/Revoult.svg",
   },
   {
     id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
+    img: "/Wirex.svg",
+  },
+];
+
+export const status = [
+  {
+    id: 1,
+    title: "500K",
+    description: "Users Across 127+ Countries",
+  },
+  {
+    id: 2,
+    title: "120",
+    description: "Affeliate Partners",
+  },
+  {
+    id: 3,
+    title: "10",
+    description: "Airdrops to Date",
+  },
+  {
+    id: 4,
+    title: "30",
+    description: "SDK Waitlist Partners",
+  },
+];
+
+export const missionText = [
+  {
+    title: "The Klink Mission",
+    subtitle:
+      "Activating Millions of Web3 Users Through AI-Enabled Wealth Creation Technology",
+    description:
+      "We are committed to empowering millions through our cutting-edge technology and innovative approach in the Web3 space.",
   },
 ];
 
@@ -204,14 +194,22 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
-    img: "/git.svg",
+    img: "/x.svg",
   },
   {
     id: 2,
-    img: "/twit.svg",
+    img: "/telegram.svg",
   },
   {
     id: 3,
-    img: "/link.svg",
+    img: "/discord.svg",
+  },
+  {
+    id: 4,
+    img: "/youtube.svg",
+  },
+  {
+    id: 5,
+    img: "/linkedin.svg",
   },
 ];
