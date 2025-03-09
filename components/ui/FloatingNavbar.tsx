@@ -11,6 +11,8 @@ import { cn } from "@/lib/utils";
 import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "../MagicButton";
 // import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { useConnectWallet } from "../../hooks/useConnectWallet";
+import ConnectWalletButton from "../ConnectWalletButton";
 
 export const FloatingNav = ({
   navItems,
@@ -23,6 +25,19 @@ export const FloatingNav = ({
   }[];
   className?: string;
 }) => {
+  const { walletInfo, connectWallet, disconnectWallet, connectors } =
+    useConnectWallet();
+  const handleConnectWallet = () => {
+    console.log("button clicked");
+    // Handle wallet connection
+    if (connectors.length > 0) {
+      connectWallet(connectors[0]);
+    }
+  };
+
+  const handleDisconnectWallet = () => {
+    disconnectWallet();
+  };
   return (
     <nav className="relative w-full rounded-tr-[35px]  shadow-md mt-10">
       <div className=" flex items-center justify-between w-full p-6 relative">
@@ -49,6 +64,23 @@ export const FloatingNav = ({
           ))}
         </div>
         {/* <ConnectButton /> */}
+        <div className="flex gap-2">
+          {!walletInfo.isConnected ? (
+            <ConnectWalletButton onClick={handleConnectWallet} />
+          ) : (
+            <>
+              <button
+                onClick={handleDisconnectWallet}
+                className="mt-5 px-4 py-2 bg-yellow-600 text-white rounded cursor-pointer hover:bg-yellow-900"
+              >
+                Disconnect Wallet
+              </button>
+              <div className="text-white text-center w-full mt-10">
+                {walletInfo.address}
+              </div>
+            </>
+          )}
+        </div>
         <MagicButton
           title="Connect Wallet"
           icon={<FaLocationArrow />}
