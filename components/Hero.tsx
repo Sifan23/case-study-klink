@@ -1,5 +1,5 @@
 import { FaLocationArrow, FaCopy } from "react-icons/fa6";
-
+import { motion } from "framer-motion";
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
@@ -8,32 +8,12 @@ import AuditedButton from "./AuditedButton";
 const Hero = () => {
   return (
     <div className="p-20 bg-black-100 rounded-[35px] rounded-tr-none">
-      {/**
-       *  UI: Spotlights
-       *  Link: https://ui.aceternity.com/components/spotlight
-       */}
-
-      {/**
-       *  UI: grid
-       *  change bg color to bg-black-100 and reduce grid color from
-       *  0.2 to 0.03
-       */}
-
-      <div className="flex justify-start relative  z-10">
+      <div className="flex flex-col-reverse lg:flex-row justify-between items-center relative z-10">
+        {/* Left Content */}
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-start justify-center">
-          {/**
-           *  Link: https://ui.aceternity.com/components/text-generate-effect
-           *
-           *  change md:text-6xl, add more responsive code
-           */}
-          {/* <TextGenerateEffect
-            words="$KLINK The Ai"
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
-          /> */}
-          <p className="text-center md:tracking-wider  text-[40px] m-0 p-0 md:text-[60px] lg:text-[76px] font-semibold tracking-[-1px] bg-purpleGradient bg-clip-text text-transparent">
+          <p className="text-left md:tracking-wider text-[40px] m-0 p-0 md:text-[60px] lg:text-[76px] font-semibold tracking-[-1px] bg-purpleGradient bg-clip-text text-transparent">
             $KLINK
           </p>
-
           <p className="text-left text-white m-0 p-0 md:tracking-wider text-[40px] md:text-[60px] lg:text-[76px] font-semibold tracking-[-1px]">
             The AI-powered infrastructure for Web3 earnings
           </p>
@@ -57,8 +37,8 @@ const Hero = () => {
                 title="Stake $KLINK"
                 icon={<FaLocationArrow />}
                 position="right"
-                bgColor="rgba(103, 78, 255, 0.1)" /* #674EFF1A */
-                borderColor="rgba(154, 138, 254, 0.5)" /* #9A8AFE80 */
+                bgColor="rgba(103, 78, 255, 0.1)"
+                borderColor="rgba(154, 138, 254, 0.5)"
                 textColor="#FFFFFF"
                 padding="16px 24px"
                 borderRadius="36.82px"
@@ -72,23 +52,34 @@ const Hero = () => {
               Audited By
             </p>
             <AuditedButton />
-            {/* <MagicButton
-              title="Audited By"
-              imageSrc="/path-to-your-logo.png" // Auditor logo
-              address="0xSDAF...k67a"
-              position="right"
-              divider={true} // Show the divider
-              icon={<FaCopy />} // Add the copy icon
-              bgColor="#55468B4D"
-              borderColor="#9C78ED33"
-              textColor="#FFFFFF"
-              padding="10px 16px"
-              borderRadius="16px"
-              fontSize="14px"
-              fontWeight="600"
-            /> */}
           </div>
         </div>
+
+        {/* Right Side: Animation */}
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="w-full lg:w-1/2 flex justify-center items-center"
+        >
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-[400px] h-[400px] object-contain"
+          >
+            <source
+              src="https://klink-cdn.klink.finance/ecosystem/klink_coin.webm"
+              type="video/webm"
+            />
+            <source
+              src="https://klink-cdn.klink.finance/ecosystem/klink_coin.mov"
+              type="video/mov"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </motion.div>
       </div>
     </div>
   );
