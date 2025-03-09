@@ -5,6 +5,17 @@ export const navItems = [
   { name: "Contact", link: "#contact" },
 ];
 
+export const listingPlatforms = [
+  { id: 1, img: "/KUCOIN.svg" },
+  { id: 2, img: "/mexc-global-seek.svg" },
+  { id: 3, img: "/gate-io.svg" },
+  { id: 4, img: "/bitpanda.svg" },
+  { id: 5, img: "/uniswap.svg" },
+  { id: 6, img: "/aerodrome.svg" },
+  { id: 7, img: "/coinmarket.svg" },
+  { id: 8, img: "/coingecko.svg" },
+];
+
 export const gridItems = [
   {
     id: 1,
