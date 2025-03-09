@@ -2,16 +2,15 @@
 
 import React from "react";
 
-import { companies, testimonials } from "@/data";
+import { status, testimonials, missionText } from "@/data";
 import { InfiniteMovingCards } from "./ui/InfiniteCards";
 
 const Clients = () => {
   return (
     <section id="testimonials" className="py-20">
-      <h1 className="heading">
-        Kind words from
-        <span className="text-purple"> satisfied clients</span>
-      </h1>
+      <p className="text-center text-[#0B1133] font-medium italic text-[24.2px]">
+        Trusted by the best in Web3
+      </p>
 
       <div className="flex flex-col items-center max-lg:mt-10">
         <div
@@ -25,24 +24,58 @@ const Clients = () => {
           />
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10">
-          {companies.map((company) => (
-            <React.Fragment key={company.id}>
-              <div className="flex md:max-w-60 max-w-32 gap-2">
-                <img
-                  src={company.img}
-                  alt={company.name}
-                  className="md:w-10 w-5"
-                />
-                <img
-                  src={company.nameImg}
-                  alt={company.name}
-                  width={company.id === 4 || company.id === 5 ? 100 : 150}
-                  className="md:w-24 w-20"
-                />
+        <div className="flex flex-wrap items-center justify-center gap-16 max-lg:mt-10">
+          {status.map((s) => (
+            <div key={s.id} className="flex flex-col items-center text-center">
+              <div className="flex items-center">
+                <span className="text-black font-normal text-[72.61px] leading-none">
+                  {s.title}
+                </span>
+                <span
+                  className="text-[#9da0ad] font-normal text-[48.41px] leading-none"
+                  style={{ transform: "translateY(12px)" }} // Adjust this value to control how much lower the "+" sign should go
+                >
+                  +
+                </span>
               </div>
-            </React.Fragment>
+              <p className="text-[#9583FF] text-[24.2px] font-normal">
+                {s.description}
+              </p>
+            </div>
           ))}
+        </div>
+
+        {/* New Grid Layout for Text and Image */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Text Grid (Left) */}
+          <div
+            className="flex flex-col justify-center text-left"
+            style={{ height: "312px", width: "573px" }}
+          >
+            <h2 className="font-normal text-[#9583FF] text-[24.2px] mb-4">
+              The Klink Mission
+            </h2>
+            <h3 className="font-normal text-[#0B1133] text-[48px] mb-4">
+              Activating Millions of Web3 Users Through AI-Enabled Wealth
+              Creation Technology
+            </h3>
+            <p className="italic text-[#6d7085] text-[16px]">
+              We are committed to empowering millions through our cutting-edge
+              technology and innovative approach in the Web3 space.
+            </p>
+          </div>
+
+          {/* Image Grid (Right) */}
+          <div
+            className="w-full"
+            style={{
+              width: "851.4841918945312px",
+              height: "520px",
+              backgroundImage: "url('/klink-mission.png')", // Replace with the actual image URL
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          ></div>
         </div>
       </div>
     </section>
