@@ -10,6 +10,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "../MagicButton";
+// import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 export const FloatingNav = ({
   navItems,
@@ -22,35 +23,15 @@ export const FloatingNav = ({
   }[];
   className?: string;
 }) => {
-  const { scrollYProgress } = useScroll();
-
-  // set true for the initial state so that nav bar is visible in the hero section
-  const [visible, setVisible] = useState(true);
-
-  useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
-    if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
-
-      if (scrollYProgress.get() < 0.05) {
-        // also set true for the initial state
-        setVisible(true);
-      } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
-      }
-    }
-  });
-
   return (
-    <nav className="w-full bg-[#0F0F14] shadow-md py-4 z-50 relative">
-      <div className="container mx-auto flex justify-between items-center px-6">
-        <div className="flex items-center">
+    <nav className="relative w-full rounded-tr-[35px]  shadow-md mt-10">
+      <div className=" flex items-center justify-between w-full p-6 relative">
+        <div className="bg-white pl-20 pr-4 py-2 rounded-r-lg relative z-10">
           <img src="/klink-logo.svg" alt="Logo" className="h-10 w-auto" />
         </div>
+        {/* Background - Starts After Logo */}
+        <div className="absolute left-[450px] top-0 w-[calc(100%-450px)] h-full bg-black-100 -z-10 rounded-tl-[35px]  rounded-tr-[35px] rounded-bl-none"></div>
+
         <div className="flex space-x-6">
           {navItems.map((navItem: any, idx: number) => (
             <Link
@@ -67,6 +48,7 @@ export const FloatingNav = ({
             </Link>
           ))}
         </div>
+        {/* <ConnectButton /> */}
         <MagicButton
           title="Connect Wallet"
           icon={<FaLocationArrow />}
