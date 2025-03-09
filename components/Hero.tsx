@@ -4,6 +4,8 @@ import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import AuditedButton from "./AuditedButton";
+import { listingPlatforms } from "@/data";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -52,6 +54,30 @@ const Hero = () => {
               Audited By
             </p>
             <AuditedButton />
+          </div>
+
+          {/* $KLINK Listed On Section */}
+          <div className="mt-10 w-[133px] h-[21px] opacity-70 bg-transparent text-white font-inter font-semibold text-[16px] leading-[130%] tracking-[-1%] text-center">
+            $KLINK Listed On
+          </div>
+
+          {/* Platform Cards */}
+          <div className="flex justify-between items-center flex-wrap gap-4 mt-3 w-full">
+            {listingPlatforms.map((platform) => (
+              <div
+                key={platform.id}
+                className="flex justify-center items-center border-2 border-[#362B4F] bg-[#2E2746] rounded-[16px] p-[10px] px-[8px]"
+                style={{ height: "53.31px", width: "auto" }}
+              >
+                <Image
+                  src={platform.img}
+                  alt={`Platform ${platform.id}`}
+                  width={100}
+                  height={53}
+                  className="h-full object-contain"
+                />
+              </div>
+            ))}
           </div>
         </div>
 
