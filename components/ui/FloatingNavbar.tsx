@@ -68,20 +68,48 @@ export const FloatingNav = ({
           {!walletInfo.isConnected ? (
             <ConnectWalletButton onClick={handleConnectWallet} />
           ) : (
-            <>
+            <div className="flex gap-4 items-center">
+              {/* Address Text Field */}
+              <input
+                type="text"
+                value={walletInfo.address}
+                readOnly
+                className="w-[308.83px] h-[54px] rounded-[36.82px] border-[1.5px] border-[#9A8AFE] px-[24px] py-[16px] text-white bg-transparent font-semibold"
+                style={{
+                  letterSpacing: "-1%",
+                  fontFamily: "Inter",
+                  lineHeight: "130%",
+                  fontSize: "16px",
+                  display: "flex",
+                  alignItems: "center",
+                  verticalAlign: "middle", // Fix vertical alignment here
+                }}
+              />
+
+              {/* Disconnect Button */}
               <button
                 onClick={handleDisconnectWallet}
-                className="mt-5 px-4 py-2 bg-yellow-600 text-white rounded cursor-pointer hover:bg-yellow-900"
+                className="px-[24px] py-[16px] text-white rounded-[36.82px] flex items-center justify-center gap-[9.82px] text-center"
+                style={{
+                  background:
+                    "linear-gradient(90deg, #674EFF 0%, #714EBD 100%)",
+                  border: "1.5px solid #9A8AFE",
+                  fontFamily: "Inter",
+                  fontWeight: 600,
+                  fontSize: "16px",
+                  lineHeight: "130%",
+                  letterSpacing: "-1%",
+                  display: "flex",
+                  alignItems: "center", // Ensure button content is centered vertically
+                  verticalAlign: "middle", // Align button to the middle of its container
+                }}
               >
                 Disconnect Wallet
               </button>
-              <div className="text-white text-center w-full mt-10">
-                {walletInfo.address}
-              </div>
-            </>
+            </div>
           )}
         </div>
-        <MagicButton
+        {/* <MagicButton
           title="Connect Wallet"
           icon={<FaLocationArrow />}
           position="right"
@@ -92,7 +120,7 @@ export const FloatingNav = ({
           borderRadius="36.82px"
           fontSize="16px"
           fontWeight="600"
-        />
+        /> */}
       </div>
     </nav>
   );
