@@ -11,11 +11,11 @@ const Hero = () => {
   return (
     <div className="p-8 md:p-20 bg-black-100 rounded-[35px] rounded-tr-none min-h-[900px] relative overflow-hidden flex flex-col md:flex-row items-center md:items-start text-center md:text-left">
       {/* === Text Content === */}
-      <div className="relative z-10 w-full md:w-1/2 flex flex-col justify-center">
+      <div className="relative z-10 w-full md:w-1/2 flex flex-col justify-center flex-grow md:flex-grow-0 max-w-[800px]">
         <p className="text-center md:text-left md:tracking-wider text-[40px] md:text-[60px] lg:text-[56px] font-semibold bg-purpleGradient bg-clip-text text-transparent tracking-[-1px] leading-[1] m-0">
           $KLINK
         </p>
-        <p className="text-white text-[32px] md:text-[56px] font-semibold leading-tight md:leading-[79.8px] tracking-[-1px] text-center md:text-left m-0">
+        <p className="text-white text-[32px] md:text-[56px] font-semibold leading-tight md:leading-[79.8px] tracking-[-1px] text-center md:text-left m-0 max-w-[600px]">
           The AI-powered infrastructure for Web3 earnings
         </p>
         <div className="flex flex-row space-x-4 md:space-x-6 mt-10">
@@ -50,7 +50,9 @@ const Hero = () => {
             />
           </a>
         </div>
-        <div className="mt-10">
+
+        {/* === Audited By Section for Small Devices === */}
+        <div className="mt-auto mb-4 md:mb-0 md:pt-10">
           <p className="text-left text-white mb-5 md:tracking-wider text-[14px] md:text-[15px] lg:text-[16px] font-semibold tracking-[-1px]">
             Audited By
           </p>
