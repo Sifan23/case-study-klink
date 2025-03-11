@@ -59,6 +59,31 @@ const Hero = () => {
           <AuditedButton />
         </div>
       </div>
+      {/* $KLINK Listed On Section (Spanning Both Grids) */}
+      <div className="absolute left-0 right-0 top-[80%] flex flex-col items-start z-0 px-20">
+        <div className=" h-[21px] opacity-70 bg-transparent text-white font-inter font-semibold text-[16px] leading-[130%] tracking-[-1%]  text-center">
+          $KLINK Listed On
+        </div>
+
+        {/* Platform Cards */}
+        <div className="flex justify-center flex-wrap gap-4 mt-3 w-full max-w-[90vw] z-100">
+          {listingPlatforms.map((platform) => (
+            <div
+              key={platform.id}
+              className="flex justify-center items-center border-2 border-[#362B4F] bg-[#2E2746] rounded-[16px] p-[10px] px-[8px]"
+              style={{ height: "53.31px", width: "auto" }}
+            >
+              <Image
+                src={platform.img}
+                alt={`Platform ${platform.id}`}
+                width={100}
+                height={53}
+                className="h-full object-contain"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* === Desktop Video (Right Side) === */}
       <div className="hidden md:block absolute top-0 right-0 h-full w-2/3 overflow-hidden">
