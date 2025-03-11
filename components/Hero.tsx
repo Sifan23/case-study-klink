@@ -6,6 +6,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import AuditedButton from "./AuditedButton";
 import { listingPlatforms } from "@/data";
 import Image from "next/image";
+import { InfiniteMovingPlatformCards } from "./ui/InfiniteMovingPlatformCards";
 
 const Hero = () => {
   return (
@@ -52,7 +53,7 @@ const Hero = () => {
         </div>
 
         {/* === Audited By Section for Small Devices === */}
-        <div className="mt-auto mb-4 md:mb-0 md:pt-10">
+        <div className="mt-auto md:mb-0 pt-10 mb-20">
           <p className="text-left text-white mb-5 md:tracking-wider text-[14px] md:text-[15px] lg:text-[16px] font-semibold tracking-[-1px]">
             Audited By
           </p>
@@ -66,23 +67,12 @@ const Hero = () => {
         </div>
 
         {/* Platform Cards */}
-        <div className="flex justify-center flex-wrap gap-4 mt-3 w-full relative z-[120]">
-          {listingPlatforms.map((platform) => (
-            <div
-              key={platform.id}
-              className="flex justify-center items-center border-2 border-[#362B4F] bg-[#2E2746] rounded-[16px] p-[10px] px-[8px]"
-              style={{ height: "53.31px", width: "auto" }}
-            >
-              <Image
-                src={platform.img}
-                alt={`Platform ${platform.id}`}
-                width={100}
-                height={53}
-                className="h-full object-contain"
-              />
-            </div>
-          ))}
-        </div>
+        <InfiniteMovingPlatformCards
+          items={listingPlatforms} // The platform data you have
+          direction="left" // Set scroll direction
+          speed="normal" // Set scroll speed
+          pauseOnHover={true} // Enable pause on hover
+        />
       </div>
 
       {/* === Desktop Video (Right Side) === */}
