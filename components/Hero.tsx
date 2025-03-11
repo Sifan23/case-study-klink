@@ -60,13 +60,13 @@ const Hero = () => {
         </div>
       </div>
       {/* $KLINK Listed On Section (Spanning Both Grids) */}
-      <div className="absolute left-0 right-0 top-[80%] flex flex-col items-start z-0 px-20">
-        <div className=" h-[21px] opacity-70 bg-transparent text-white font-inter font-semibold text-[16px] leading-[130%] tracking-[-1%]  text-center">
+      <div className="absolute left-0 right-0 top-[75%] flex flex-col items-start z-[110] px-20 w-full">
+        <div className="h-[21px] opacity-70 bg-transparent text-white font-inter font-semibold text-[16px] leading-[130%] tracking-[-1%] text-center">
           $KLINK Listed On
         </div>
 
         {/* Platform Cards */}
-        <div className="flex justify-center flex-wrap gap-4 mt-3 w-full max-w-[90vw] z-100">
+        <div className="flex justify-center flex-wrap gap-4 mt-3 w-full relative z-[120]">
           {listingPlatforms.map((platform) => (
             <div
               key={platform.id}
