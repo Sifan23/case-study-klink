@@ -13,14 +13,14 @@ const MagicButton = ({
   icon,
   position,
   handleClick,
-  bgColor,
-  borderColor,
-  textColor,
-  padding,
-  borderRadius,
-  fontSize,
-  fontWeight,
-  otherClasses,
+  bgColor = "transparent",
+  borderColor = "transparent",
+  textColor = "#FFFFFF",
+  padding = "px-4 py-2",
+  borderRadius = "rounded-md",
+  fontSize = "text-sm",
+  fontWeight = "font-medium",
+  otherClasses = "",
 }: {
   title: string;
   icon: React.ReactNode;
