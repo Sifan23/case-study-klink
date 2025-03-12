@@ -1,7 +1,7 @@
 export const navItems = [
-  { name: "Home", link: "#home" },
-  { name: "Buy $Klink", link: "#buy" },
-  { name: "Stake $Klink", link: "#stake" },
+  { name: "Home", link: "#home", color: "#FFFFFF" },
+  { name: "Buy $Klink", link: "#buy", color: "#9583FF" },
+  { name: "Stake $Klink", link: "#stake", color: "#8a8a8f" },
 ];
 
 export const listingPlatforms = [
