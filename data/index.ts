@@ -205,21 +205,26 @@ export const socialMedia = [
   {
     id: 1,
     img: "/x.svg",
+    link: "https://x.com/klinkfinance",
   },
   {
     id: 2,
     img: "/telegram.svg",
+    link: "https://t.me/klinkfinance",
   },
   {
     id: 3,
     img: "/discord.svg",
+    link: "https://discord.com/invite/klinkfinance",
   },
   {
     id: 4,
     img: "/youtube.svg",
+    link: "https://www.youtube.com/@klinkfinance",
   },
   {
     id: 5,
     img: "/linkedin.svg",
+    link: "https://www.linkedin.com/company/klinkfinance",
   },
 ];
