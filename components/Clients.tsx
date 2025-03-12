@@ -4,6 +4,7 @@ import React from "react";
 
 import { status, testimonials, missionText } from "@/data";
 import { InfiniteMovingCards } from "./ui/InfiniteCards";
+import Image from "next/image";
 
 const Clients = () => {
   return (
@@ -46,34 +47,32 @@ const Clients = () => {
         </div>
 
         {/* New Grid Layout for Text and Image */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 ">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2">
           {/* Text Grid (Left) */}
-          <div className="flex flex-col justify-center text-left    gap-2 pt-20">
+          <div className="flex flex-col justify-center text-left gap-2 pt-20">
             <p className="font-normal text-[#9583FF] text-[24.2px] mb-4">
               The Klink Mission
             </p>
-            <h6 className="font-normal text-[#0B1133] text-[48px] leading-[55px] tracking-[-1.44px] mb-4 ">
+            <h6 className="font-normal text-[#0B1133] text-[48px] leading-[55px] tracking-[-1.44px] mb-4">
               Activating Millions of Web3 Users Through AI-Enabled Wealth
               Creation Technology
             </h6>
-
             <p className="italic text-[#6d7085] text-[16px]">
               We are committed to empowering millions through our cutting-edge
               technology and innovative approach in the Web3 space.
             </p>
           </div>
-
           {/* Image Grid (Right) */}
-          <div
-            className="w-full"
-            style={{
-              width: "700px",
-              height: "520px",
-              backgroundImage: "url('/klink-mission.png')", // Replace with the actual image URL
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          ></div>
+          <div className="flex justify-center items-center w-full">
+            <Image
+              src="/klink-mission.png"
+              alt="Klink Mission"
+              width={750} // Increased width
+              height={600} // Increased height
+              className="w-full md:w-[90%] h-auto object-contain"
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>
