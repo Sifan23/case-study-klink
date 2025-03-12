@@ -47,28 +47,29 @@ const Clients = () => {
         </div>
 
         {/* New Grid Layout for Text and Image */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-0">
           {/* Text Grid (Left) */}
-          <div className="flex flex-col justify-center text-left gap-2 pt-20">
-            <p className="font-normal text-[#9583FF] text-[24.2px] mb-4">
+          <div className="flex flex-col justify-center gap-4 pt-10 text-center md:text-left">
+            <p className="font-normal text-[#9583FF] text-[20px] sm:text-[18px] md:text-[24.2px] mb-2">
               The Klink Mission
             </p>
-            <h6 className="font-normal text-[#0B1133] text-[48px] leading-[55px] tracking-[-1.44px] mb-4">
+            <h6 className="font-normal text-[#0B1133] text-[32px] sm:text-[28px] md:text-[48px] leading-tight tracking-[-1px] md:tracking-[-1.44px] mb-3">
               Activating Millions of Web3 Users Through AI-Enabled Wealth
               Creation Technology
             </h6>
-            <p className="italic text-[#6d7085] text-[16px]">
+            <p className="italic text-[#6d7085] text-[16px] sm:text-[14px]">
               We are committed to empowering millions through our cutting-edge
               technology and innovative approach in the Web3 space.
             </p>
           </div>
+
           {/* Image Grid (Right) */}
           <div className="flex justify-center items-center w-full">
             <Image
               src="/klink-mission.png"
               alt="Klink Mission"
-              width={750} // Increased width
-              height={600} // Increased height
+              width={750}
+              height={600}
               className="w-full md:w-[90%] h-auto object-contain"
               priority
             />
