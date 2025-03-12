@@ -204,7 +204,7 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
-    img: "/x.svg",
+    img: "/X.svg",
     link: "https://x.com/klinkfinance",
   },
   {
