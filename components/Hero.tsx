@@ -53,27 +53,29 @@ const Hero = () => {
         </div>
 
         {/* === Audited By Section for Small Devices === */}
-        <div className="mt-auto md:mb-0 pt-10 mb-20">
+        <div className="mt-auto md:mb-0 pt-10 mb-4">
           <p className="text-left text-white mb-5 md:tracking-wider text-[14px] md:text-[15px] lg:text-[16px] font-semibold tracking-[-1px]">
             Audited By
           </p>
           <AuditedButton />
         </div>
+        <div className="flex flex-col items-start z-[110] px-20 w-full mt-12 sm:mt-16 md:mt-0 relative">
+          <div className="h-[21px] opacity-70 bg-transparent text-white font-inter font-semibold text-[16px] leading-[130%] tracking-[-1%] text-center">
+            $KLINK Listed On
+          </div>
+
+          {/* Platform Cards */}
+          <InfiniteMovingPlatformCards
+            items={listingPlatforms} // The platform data you have
+            direction="left" // Set scroll direction
+            speed="normal" // Set scroll speed
+            pauseOnHover={true} // Enable pause on hover
+          />
+        </div>
       </div>
       {/* $KLINK Listed On Section (Spanning Both Grids) */}
-      <div className="absolute left-0 right-0 top-[75%] flex flex-col items-start z-[110] px-20 w-full">
-        <div className="h-[21px] opacity-70 bg-transparent text-white font-inter font-semibold text-[16px] leading-[130%] tracking-[-1%] text-center">
-          $KLINK Listed On
-        </div>
-
-        {/* Platform Cards */}
-        <InfiniteMovingPlatformCards
-          items={listingPlatforms} // The platform data you have
-          direction="left" // Set scroll direction
-          speed="normal" // Set scroll speed
-          pauseOnHover={true} // Enable pause on hover
-        />
-      </div>
+      {/* $KLINK Listed On Section */}
+      {/* $KLINK Listed On Section */}
 
       {/* === Desktop Video (Right Side) === */}
       <div className="hidden md:block absolute top-0 right-0 h-full w-2/3 overflow-hidden">
