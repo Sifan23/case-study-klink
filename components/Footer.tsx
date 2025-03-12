@@ -125,7 +125,7 @@ const Footer = () => {
         <hr className="w-full border-t border-black opacity-10" />
 
         {/* Second Paragraph with Equal Spacing */}
-        <div className="flex flex-col justify-center items-start text-left py-8 opacity-20">
+        <div className="flex flex-col justify-center items-start text-left py-8 opacity-20 w-full">
           <p className="text-[12px] md:text-[14px] font-[400] leading-[130%] tracking-[0%] text-[#0F0F0F] max-w-[800px]">
             Klink Finance sp. z o.o. is a limited liability company registered
             in Poland with company number 0000957722 with a registered office
