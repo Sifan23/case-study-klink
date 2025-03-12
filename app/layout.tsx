@@ -11,8 +11,8 @@ const WagmiClientProvider = dynamic(() => import("@/app/WagmiClientProvider"), {
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Adrian's Portfolio",
-  description: "Modern & Minimal JS Mastery Portfolio",
+  title: "Klink Finance",
+  description: "Case Study",
 };
 
 export default function RootLayout({
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/jsm-logo.png" sizes="any" />
+        <link rel="icon" href="/klink-logo.svg" sizes="48x48" />
       </head>
       <body className={inter.className}>
         <WagmiClientProvider>
